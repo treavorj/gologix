@@ -1,4 +1,4 @@
-module github.com/danomagnum/gologix
+module github.com/treavorj/gologix
 
 go 1.18
 
