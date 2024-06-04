@@ -22,7 +22,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/danomagnum/gologix"
+	"github.com/treavorj/gologix"
 )
 
 // these types will be the input and output data section for the io connection.

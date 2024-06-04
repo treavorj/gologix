@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/danomagnum/gologix"
+	"github.com/treavorj/gologix"
 )
 
 // Demo program for readng an INT tag named "TestInt" in the controller.

@@ -11,7 +11,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/danomagnum/gologix"
+	"github.com/treavorj/gologix"
 )
 
 type PLCPollData struct {

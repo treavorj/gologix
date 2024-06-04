@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/danomagnum/gologix"
+	"github.com/treavorj/gologix"
 )
 
 // Demo program for readng multiple tags at once where the tags are in a go map.

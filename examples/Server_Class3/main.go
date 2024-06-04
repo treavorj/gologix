@@ -21,7 +21,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/danomagnum/gologix"
+	"github.com/treavorj/gologix"
 )
 
 func main() {

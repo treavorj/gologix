@@ -5,7 +5,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/danomagnum/gologix"
+	"github.com/treavorj/gologix"
 )
 
 func TestRealHardware(t *testing.T) {
