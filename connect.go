@@ -182,7 +182,7 @@ func (client *Client) keepalive() {
 			}
 
 		case <-client.cancel_keepalive:
-			t.Stop()
+			return
 		}
 	}
 }
@@ -491,16 +491,11 @@ func (client *Client) parseResponse(header *eipHeader, data *bytes.Buffer) ([]CI
 		}
 	}
 	if respHeader.Status != 0 {
-		var errMsg string
-		switch respHeader.Status {
-		case 1:
-			errMsg = "connection failure"
-		case 8:
-			errMsg = "service not supported"
-		default:
-			errMsg = "bad status on header"
-		}
-		client.SLogger.Error(errMsg, slog.Any("status", respHeader.Status))
+		errMsg := "bad status on response"
+		client.SLogger.Error(errMsg,
+			slog.Any("status", respHeader.Status),
+			slog.String("statusDesc", respHeader.Status.String()),
+		)
 		return nil, fmt.Errorf("%s status: %v", errMsg, respHeader.Status)
 	}
 	return items, nil
